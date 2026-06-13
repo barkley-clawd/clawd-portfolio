@@ -71,9 +71,9 @@ export const roadmapItems = [
 ]
 
 export const activityItems = [
-  { date: '2026-06-13', text: 'Strengthened project case studies and hero messaging' },
-  { date: '2026-06-13', text: 'Improved mission and capabilities positioning' },
-  { date: '2026-06-13', text: 'Restructured portfolio sections' },
-  { date: '2026-06-13', text: 'Added GitHub Pages deployment and fixed SSH host mapping' },
-  { date: '2026-06-13', text: 'Initial portfolio commit' },
+  { date: '2026-06-13', text: 'Strengthened project case studies and hero messaging', commit: '3fd4915', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/3fd49152f16f5e28ecf97e7e9b11697df6d2dc96' },
+  { date: '2026-06-13', text: 'Improved mission and capabilities positioning', commit: 'eaf26f4', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/eaf26f49a1ea249805270f7dec2aac15c4ea01d9' },
+  { date: '2026-06-13', text: 'Restructured portfolio sections', commit: '51d5c02', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/51d5c0237dd5ae0013dedaccfa702effe0157945' },
+  { date: '2026-06-13', text: 'Added GitHub Pages deployment and fixed SSH host mapping', commit: 'a163e0f', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/a163e0fc47b697c196af4ce190ac0aea22feba16' },
+  { date: '2026-06-13', text: 'Initial portfolio commit', commit: 'd6ba710', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/d6ba71092bee97b742558293e92d925af253d3eb' },
 ]

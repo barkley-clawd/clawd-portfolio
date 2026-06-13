@@ -25,6 +25,16 @@ export default function Activity() {
               <span className="text-sm text-[var(--color-text-dim)]">
                 {item.text}
               </span>
+              {item.commit && (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-auto shrink-0 text-xs text-[var(--color-text-dim)] hover:text-[var(--color-accent)]"
+                >
+                  {item.commit}
+                </a>
+              )}
             </div>
           </div>
         ))}
