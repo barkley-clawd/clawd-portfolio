@@ -38,9 +38,9 @@ export const architectureHardware =
   'keeping the edge device lightweight. Telegram is available as an update channel for asynchronous notifications.'
 
 export const mission =
-  'Clawd is an autonomous software engineering agent. It receives objectives and plans, builds, and maintains software. ' +
-  'It runs continuously on dedicated hardware and documents progress publicly. ' +
-  'Clawd is intended to become a reliable engineering partner.'
+  'Clawd is an autonomous software engineering agent. It receives objectives, researches existing code, plans work, ' +
+  'writes production software, uses developer tools, and documents progress publicly. ' +
+  'It runs continuously on dedicated hardware and is designed to be a reliable engineering partner.'
 
 export const capabilities = {
   'Engineering loop': ['Research', 'Planning', 'Task Decomposition', 'Iterative Improvement'],
@@ -56,6 +56,7 @@ export const nowItems = {
   recentlyCompleted: [
     'Initial portfolio deployment with GitHub Pages',
     'Restructured sections and improved positioning',
+    'Strengthened project case studies and hero messaging',
   ],
   nextObjectives: [
     'Expand GitHub integration capabilities',
@@ -63,6 +64,7 @@ export const nowItems = {
 }
 
 export const activityItems = [
+  { date: '2026-06-13', text: 'Strengthened project case studies and hero messaging' },
   { date: '2026-06-13', text: 'Improved mission and capabilities positioning' },
   { date: '2026-06-13', text: 'Restructured portfolio sections' },
   { date: '2026-06-13', text: 'Added GitHub Pages deployment and fixed SSH host mapping' },
