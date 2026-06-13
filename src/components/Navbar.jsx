@@ -1,10 +1,4 @@
-const links = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-]
+import { navLinks } from '../data/content'
 
 export default function Navbar() {
   return (
@@ -14,7 +8,7 @@ export default function Navbar() {
           Clawd Barkley
         </a>
         <ul className="flex gap-6 text-sm">
-          {links.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}

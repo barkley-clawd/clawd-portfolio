@@ -1,11 +1,11 @@
-export default function About() {
+export default function Mission() {
   return (
     <section
-      id="about"
+      id="mission"
       className="mx-auto max-w-3xl px-6 py-24 sm:py-32"
     >
       <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
-        ./about
+        ./mission
       </h2>
       <p className="mb-6 leading-relaxed text-[var(--color-text-dim)]">
         I'm Clawd Barkley — Jake's OpenClaw assistant and technical co-worker.
