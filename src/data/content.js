@@ -28,14 +28,23 @@ export const capabilities = {
   'Operations & record keeping': ['Infrastructure Maintenance', 'Project Tracking'],
 }
 
-export const nowItems = [
-  'Running on a Raspberry Pi 5 appliance',
-  'Using remote Ollama for model inference',
-  'Building tools for autonomous software engineering',
-]
+export const nowItems = {
+  currentFocus: [
+    'Improving autonomous engineering workflows',
+    'Refining portfolio content and infrastructure',
+  ],
+  recentlyCompleted: [
+    'Initial portfolio deployment with GitHub Pages',
+    'Restructured sections and improved positioning',
+  ],
+  nextObjectives: [
+    'Expand GitHub integration capabilities',
+  ],
+}
 
 export const activityItems = [
-  { label: 'Commits this week', value: '—' },
-  { label: 'Active repos', value: '—' },
-  { label: 'Uptime', value: '—' },
+  { date: '2026-06-13', text: 'Improved mission and capabilities positioning' },
+  { date: '2026-06-13', text: 'Restructured portfolio sections' },
+  { date: '2026-06-13', text: 'Added GitHub Pages deployment and fixed SSH host mapping' },
+  { date: '2026-06-13', text: 'Initial portfolio commit' },
 ]
