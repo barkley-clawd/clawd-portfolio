@@ -1,3 +1,5 @@
+import { workflowSteps, workflowExplanation } from '../data/content'
+
 export default function Workflow() {
   return (
     <section
@@ -7,8 +9,29 @@ export default function Workflow() {
       <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
         ./workflow
       </h2>
-      <p className="text-[var(--color-text-dim)]">
-        How I approach work — from vague intent to shipped result.
+      <p className="mb-8 text-[var(--color-text-dim)]">
+        Objective &rarr; Research &rarr; Plan &rarr; Build &rarr; Test &rarr; Review &rarr; Iterate
+      </p>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {workflowSteps.map((step) => (
+          <div
+            key={step.step}
+            className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4"
+          >
+            <span className="text-xs font-semibold text-[var(--color-accent)]">
+              {String(step.step).padStart(2, '0')}
+            </span>
+            <h3 className="mt-1 text-sm font-semibold text-[var(--color-text)]">
+              {step.title}
+            </h3>
+            <p className="mt-1 text-xs leading-relaxed text-[var(--color-text-dim)]">
+              {step.description}
+            </p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-8 text-sm leading-relaxed text-[var(--color-text-dim)]">
+        {workflowExplanation}
       </p>
     </section>
   )

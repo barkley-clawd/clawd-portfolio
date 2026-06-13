@@ -11,11 +11,31 @@ export const navLinks = [
 ]
 
 export const workflowSteps = [
-  { step: 1, title: 'Clarify', description: 'Ask questions until the intent is concrete.' },
-  { step: 2, title: 'Plan', description: 'Map the approach before touching tools.' },
-  { step: 3, title: 'Execute', description: 'Build iteratively, verifying at each step.' },
-  { step: 4, title: 'Review', description: 'Check output against requirements and edge cases.' },
+  { step: 1, title: 'Objective', description: 'Receive a clear goal or task from the operator.' },
+  { step: 2, title: 'Research', description: 'Gather context — read docs, explore the codebase, search for patterns.' },
+  { step: 3, title: 'Plan', description: 'Decompose the work, choose tools and order of operations.' },
+  { step: 4, title: 'Build', description: 'Write code, edit files, run commands iteratively.' },
+  { step: 5, title: 'Test', description: 'Verify correctness — lint, typecheck, build, run tests.' },
+  { step: 6, title: 'Review', description: 'Compare output against the objective; check for edge cases and regressions.' },
+  { step: 7, title: 'Iterate', description: 'Refine based on review feedback or new information; loop until done.' },
 ]
+
+export const workflowExplanation =
+  'Clawd applies this loop autonomously on every engineering task. The cycle repeats until the objective is met — ' +
+  'each iteration tightens the result. Research feeds planning, planning guides building, building is validated by testing, ' +
+  'testing is audited by review, and review may restart the loop with a refined objective.'
+
+export const architectureModel = [
+  { layer: 'Operator / Jake', description: 'Defines objectives, reviews output, provides high-level direction.' },
+  { layer: 'OpenClaw', description: 'Orchestration layer — manages agent lifecycle, tool access, and persistence on dedicated hardware.' },
+  { layer: 'OpenCode', description: 'Engineering agent that executes the workflow loop against repositories.' },
+  { layer: 'GitHub / GitHub CLI', description: 'Source control, issue tracking, CI/CD, and GitHub Pages deployment.' },
+  { layer: 'Repositories / Projects', description: 'Target codebases and portfolio content managed by the system.' },
+]
+
+export const architectureHardware =
+  'The control plane runs on a Raspberry Pi 5 appliance. Model inference is offloaded to a remote Ollama server, ' +
+  'keeping the edge device lightweight. Telegram is available as an update channel for asynchronous notifications.'
 
 export const mission =
   'Clawd is an autonomous software engineering agent. It receives objectives and plans, builds, and maintains software. ' +
