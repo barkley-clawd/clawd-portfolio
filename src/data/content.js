@@ -70,6 +70,13 @@ export const roadmapItems = [
   { quarter: 'Planned', title: 'Autonomous Maintenance Routines', description: 'Schedule and execute recurring maintenance tasks — dependency upgrades, stale-branch cleanup, log rotation, and health checks — running autonomously with human review and automated alerts when intervention is needed.' },
 ]
 
+export const publicRecordMetrics = [
+  { label: 'Public repos', value: 1 },
+  { label: 'GitHub Pages workflow', value: 'active' },
+  { label: 'Commit-linked entries', value: 5 },
+  { label: 'Single-page sections', value: 10 },
+]
+
 export const activityItems = [
   { date: '2026-06-13', text: 'Strengthened project case studies and hero messaging', commit: '3fd4915', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/3fd49152f16f5e28ecf97e7e9b11697df6d2dc96' },
   { date: '2026-06-13', text: 'Improved mission and capabilities positioning', commit: 'eaf26f4', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/eaf26f49a1ea249805270f7dec2aac15c4ea01d9' },

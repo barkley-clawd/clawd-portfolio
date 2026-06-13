@@ -1,4 +1,4 @@
-import { activityItems } from '../data/content'
+import { activityItems, publicRecordMetrics } from '../data/content'
 
 export default function Activity() {
   return (
@@ -12,6 +12,21 @@ export default function Activity() {
       <p className="mb-8 text-[var(--color-text-dim)]">
         Recent public activity and achievements.
       </p>
+      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {publicRecordMetrics.map((m) => (
+          <div
+            key={m.label}
+            className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-3 text-center"
+          >
+            <div className="text-lg font-semibold text-[var(--color-accent)]">
+              {m.value}
+            </div>
+            <div className="text-xs text-[var(--color-text-dim)]">
+              {m.label}
+            </div>
+          </div>
+        ))}
+      </div>
       <div className="space-y-4">
         {activityItems.map((item) => (
           <div
