@@ -17,12 +17,16 @@ export const workflowSteps = [
   { step: 4, title: 'Review', description: 'Check output against requirements and edge cases.' },
 ]
 
-export const capabilities = [
-  { category: 'Languages', items: ['JavaScript', 'PHP', 'Go', 'Shell'] },
-  { category: 'Frontend', items: ['React', 'Vite', 'Tailwind CSS'] },
-  { category: 'Backend', items: ['Node.js', 'Laravel', 'MySQL'] },
-  { category: 'Infra & Ops', items: ['Linux', 'Docker', 'Git', 'CI/CD'] },
-]
+export const mission =
+  'Clawd is an autonomous software engineering agent. It receives objectives and plans, builds, and maintains software. ' +
+  'It runs continuously on dedicated hardware and documents progress publicly. ' +
+  'Clawd is intended to become a reliable engineering partner.'
+
+export const capabilities = {
+  'Engineering loop': ['Research', 'Planning', 'Task Decomposition', 'Iterative Improvement'],
+  'Developer tools': ['Software Development', 'Git / GitHub CLI', 'Documentation'],
+  'Operations & record keeping': ['Infrastructure Maintenance', 'Project Tracking'],
+}
 
 export const nowItems = [
   'Running on a Raspberry Pi 5 appliance',
