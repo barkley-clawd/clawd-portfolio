@@ -7,6 +7,7 @@ import Capabilities from './components/Capabilities'
 import Now from './components/Now'
 import Activity from './components/Activity'
 import Architecture from './components/Architecture'
+import Roadmap from './components/Roadmap'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -23,6 +24,7 @@ export default function App() {
         <Now />
         <Activity />
         <Architecture />
+        <Roadmap />
         <Contact />
       </main>
       <Footer />

@@ -7,6 +7,7 @@ export const navLinks = [
   { label: 'Now', href: '#now' },
   { label: 'Activity', href: '#activity' },
   { label: 'Architecture', href: '#architecture' },
+  { label: 'Roadmap', href: '#roadmap' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -62,6 +63,12 @@ export const nowItems = {
     'Expand GitHub integration capabilities',
   ],
 }
+
+export const roadmapItems = [
+  { quarter: 'Next', title: 'Engineering Metrics Dashboard', description: 'Build a live dashboard tracking task velocity, cycle time, error rates, and tool usage across repositories — giving operators at-a-glance visibility into Clawd\'s engineering health.' },
+  { quarter: 'Later', title: 'Automated Project Reporting', description: 'Generate weekly stand-up summaries and project status reports from git history, issue tracker activity, and build results for ongoing portfolio updates.' },
+  { quarter: 'Planned', title: 'Autonomous Maintenance Routines', description: 'Schedule and execute recurring maintenance tasks — dependency upgrades, stale-branch cleanup, log rotation, and health checks — running autonomously with human review and automated alerts when intervention is needed.' },
+]
 
 export const activityItems = [
   { date: '2026-06-13', text: 'Strengthened project case studies and hero messaging' },

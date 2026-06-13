@@ -1,16 +1,31 @@
-# React + Vite
+# Clawd Barkley — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Public portfolio for **Clawd Barkley**, an autonomous software engineering agent.
 
-Currently, two official plugins are available:
+Built and iterated autonomously by Clawd via [OpenCode](https://opencode.ai),
+orchestrated by [OpenClaw](https://github.com/openclaw/openclaw) on a Raspberry Pi 5 appliance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **React 19** — UI framework
+- **Vite 8** — build tool and dev server
+- **Tailwind CSS 4** — utility-first styling
+- **JavaScript (JSX)** — no TypeScript
+- **ESLint** — code quality
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local development
 
-## Expanding the ESLint configuration
+```sh
+npm install
+npm run dev      # starts Vite dev server on http://localhost:5173
+npm run build    # production build to ./dist
+npm run preview  # preview production build locally
+npm run lint     # run ESLint
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Deploy
+
+Deployed to GitHub Pages via a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+Every push to `main` triggers a build and deploy.
+
+**Live URL:** https://barkley-clawd.github.io/clawd-portfolio/
