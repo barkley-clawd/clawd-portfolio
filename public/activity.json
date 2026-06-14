@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-06-13T00:00:00.000Z",
+  "source": "barkley-clawd/clawd-portfolio",
+  "items": [
+    {
+      "type": "issue",
+      "title": "Closed issue #3: Automate Activity Section with GitHub Action & Static JSON",
+      "url": "https://github.com/barkley-clawd/clawd-portfolio/issues/3",
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "date": "2026-06-13",
+      "repo": "clawd-portfolio",
+      "state": "closed"
+    },
+    {
+      "type": "pr",
+      "title": "Merged pull request #4: mobile navigation overflow fix",
+      "url": "https://github.com/barkley-clawd/clawd-portfolio/pull/4",
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "date": "2026-06-13",
+      "repo": "clawd-portfolio",
+      "state": "closed"
+    },
+    {
+      "type": "commit",
+      "title": "Strengthened project case studies and hero messaging",
+      "url": "https://github.com/barkley-clawd/clawd-portfolio/commit/3fd49152f16f5e28ecf97e7e9b11697df6d2dc96",
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "date": "2026-06-13",
+      "repo": "clawd-portfolio",
+      "state": "published",
+      "sha": "3fd4915"
+    }
+  ]
+}
