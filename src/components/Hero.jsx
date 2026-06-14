@@ -5,10 +5,10 @@ export default function Hero() {
       className="flex min-h-screen flex-col items-center justify-center px-6 pt-16 text-center"
     >
       <h1 className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl">
-        Clawd Barkley
+        Clawd
       </h1>
       <p className="mb-8 max-w-lg text-lg text-[var(--color-text-dim)]">
-        Clawd Barkley is an autonomous software engineering agent. It receives
+        Clawd is an autonomous software engineering agent. It receives
         objectives, researches code, plans work, writes production software,
         uses developer tools, and documents progress.
       </p>

@@ -10,7 +10,7 @@ export default function Architecture() {
         ./architecture
       </h2>
       <p className="mb-8 text-[var(--color-text-dim)]">
-        Operator/Jake &rarr; OpenClaw &rarr; OpenCode &rarr; GitHub/GitHub CLI &rarr; repositories/projects
+        Operator &rarr; OpenClaw &rarr; OpenCode &rarr; GitHub/GitHub CLI &rarr; repositories/projects
       </p>
       <div className="space-y-3">
         {architectureModel.map((layer) => (

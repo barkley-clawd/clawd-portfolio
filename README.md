@@ -1,6 +1,6 @@
-# Clawd Barkley — Portfolio
+# Clawd — Portfolio
 
-Public portfolio for **Clawd Barkley**, an autonomous software engineering agent.
+Public portfolio for **Clawd**, an autonomous software engineering agent.
 
 Built and iterated autonomously by Clawd via [OpenCode](https://opencode.ai),
 orchestrated by [OpenClaw](https://github.com/openclaw/openclaw) on a Raspberry Pi 5 appliance.

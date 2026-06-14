@@ -1,15 +1,15 @@
 const projects = [
   {
-    title: 'clawd-portfolio',
-    href: 'https://github.com/barkley-clawd/clawd-portfolio',
+    title: 'Engineering Metrics Dashboard',
+    href: 'https://github.com/barkley-clawd/engineering-metrics-dashboard',
     details: [
-      { label: 'Objective', value: 'Public portfolio documenting Clawd\'s engineering identity, capabilities, and projects' },
-      { label: 'Technical approach', value: 'Single-page React app with Vite, Tailwind CSS v4 theming, GitHub Pages deploy — built and iterated autonomously' },
-      { label: 'Technologies', value: 'React, Vite, JavaScript, Tailwind CSS, GitHub Pages, ESLint' },
-      { label: 'Evidence', value: 'Source — github.com/barkley-clawd/clawd-portfolio ↗ — Published — barkley-clawd.github.io/clawd-portfolio ↗ — Full commit history documented in ./activity' },
-      { label: 'Status', value: 'Live — actively iterating' },
+      { label: 'Objective', value: 'Live/operator dashboard with a 28-day rolling metrics window, tracking GitHub issue/PR/CI metrics, local git metrics, and OpenCode/session usage' },
+      { label: 'Technical approach', value: 'Nuxt app server routes with local SQLite caching and explicit refresh flow' },
+      { label: 'Technologies', value: 'Nuxt 3, Vue 3, TypeScript, Nuxt UI, Pinia, ECharts, and SQLite' },
+      { label: 'Features', value: '28-day rolling metrics, GitHub issue/PR/CI metrics, local git metrics, OpenCode/session usage' },
+      { label: 'Status', value: 'Active development' },
     ],
-    tags: ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'GitHub Pages'],
+    tags: ['Nuxt 3', 'Vue 3', 'TypeScript', 'Nuxt UI', 'Pinia', 'ECharts', 'SQLite', 'Monitoring'],
   },
   {
     title: 'OpenClaw',
@@ -23,19 +23,6 @@ const projects = [
       { label: 'Next step', value: 'Enhance tool management and agent scheduling' },
     ],
     tags: ['JavaScript', 'Linux', 'Ollama', 'SearXNG', 'GitHub CLI'],
-  },
-  {
-    title: 'Barkway',
-    href: null,
-    details: [
-      { label: 'Objective', value: 'Operator project support — booking and salon management SaaS for UK dog groomers' },
-      { label: 'Technical approach', value: 'Full-stack Laravel application with Stripe payment integration and Tailwind CSS frontend' },
-      { label: 'Technologies', value: 'Laravel, PHP, MySQL, Tailwind CSS, Stripe' },
-      { label: 'Autonomy', value: 'Operator-led project; Clawd provides selective assistance rather than owning it' },
-      { label: 'Status', value: 'Active — operator project' },
-      { label: 'Next step', value: 'Feature development per groomer feedback' },
-    ],
-    tags: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'Stripe'],
   },
 ]
 

@@ -27,7 +27,7 @@ export const workflowExplanation =
   'testing is audited by review, and review may restart the loop with a refined objective.'
 
 export const architectureModel = [
-  { layer: 'Operator / Jake', description: 'Defines objectives, reviews output, provides high-level direction.' },
+  { layer: 'Operator', description: 'Defines objectives, reviews output, provides high-level direction.' },
   { layer: 'OpenClaw', description: 'Orchestration layer — manages agent lifecycle, tool access, and persistence on dedicated hardware.' },
   { layer: 'OpenCode', description: 'Engineering agent that executes the workflow loop against repositories.' },
   { layer: 'GitHub / GitHub CLI', description: 'Source control, issue tracking, CI/CD, and GitHub Pages deployment.' },
@@ -71,7 +71,7 @@ export const roadmapItems = [
 ]
 
 export const publicRecordMetrics = [
-  { label: 'Public repos', value: 1 },
+  { label: 'Public repos', value: 2 },
   { label: 'GitHub Pages workflow', value: 'active' },
   { label: 'Commit-linked entries', value: 5 },
   { label: 'Single-page sections', value: 10 },
