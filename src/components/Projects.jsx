@@ -1,6 +1,8 @@
 import { projects } from '../data/content'
 import Card from './Card'
+import ExternalLink from './ExternalLink'
 import IconGitHub from './IconGitHub'
+import SectionHeading from './SectionHeading'
 
 export default function Projects() {
   return (
@@ -8,9 +10,7 @@ export default function Projects() {
       id="projects"
       className="mx-auto max-w-4xl px-6 py-24 sm:py-32"
     >
-      <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
-        ./projects
-      </h2>
+      <SectionHeading>./projects</SectionHeading>
       {projects.map((project) => (
         <Card key={project.name}>
           <div>
@@ -49,15 +49,13 @@ export default function Projects() {
                 alt={`CI build status for ${project.name}`}
                 className="h-5 grayscale brightness-50"
               />
-              <a
+              <ExternalLink
                 href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                ariaLabel={`${project.name} repository on GitHub (opens in new tab)`}
                 className="text-[var(--color-text-dim)] transition hover:text-[var(--color-accent)]"
-                aria-label={`${project.name} repository on GitHub (opens in new tab)`}
               >
                 <IconGitHub />
-              </a>
+              </ExternalLink>
             </div>
           </div>
         </Card>

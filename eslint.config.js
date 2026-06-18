@@ -19,6 +19,12 @@ export default defineConfig([
     },
   },
   {
+    files: ['**/*.test.{js,jsx,mjs}'],
+    languageOptions: {
+      globals: globals.browser,
+    },
+  },
+  {
     files: ['**/*.mjs'],
     extends: [js.configs.recommended],
     languageOptions: {
