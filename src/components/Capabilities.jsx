@@ -1,10 +1,5 @@
 import { capabilities } from '../data/content'
-
-const headingMap = {
-  engineering: 'Engineering work',
-  developerTools: 'Developer tools',
-  operations: 'Operations',
-}
+import Card from './Card'
 
 export default function Capabilities() {
   return (
@@ -19,13 +14,10 @@ export default function Capabilities() {
         Supported capabilities. No filler, no overclaiming.
       </p>
       <div className="grid gap-6 sm:grid-cols-2">
-        {Object.entries(capabilities).map(([category, items]) => (
-          <div
-            key={category}
-            className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
-          >
+        {capabilities.map(({ heading, items }) => (
+          <Card key={heading}>
             <h3 className="mb-3 text-sm font-semibold text-[var(--color-accent)]">
-              {headingMap[category] || category}
+              {heading}
             </h3>
             <ul className="space-y-2">
               {items.map((item) => (
@@ -35,7 +27,7 @@ export default function Capabilities() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

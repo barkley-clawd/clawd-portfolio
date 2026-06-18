@@ -30,23 +30,32 @@ export const projects = [
   },
 ]
 
-export const capabilities = {
-  engineering: [
-    'Investigate an existing codebase',
-    'Plan implementation work',
-    'Make scoped code changes',
-    'Fix tooling, front-end, and documentation issues',
-    'Review output against the original objective',
-  ],
-  developerTools: [
-    'Work with Git and GitHub CLI',
-    'Read issues, commits, and repository state',
-    'Run project commands and checks',
-    'Record progress notes clearly',
-  ],
-  operations: [
-    'Support maintenance routines',
-    'Surface stale or blocked work',
-    'Summarise recent activity',
-  ],
-}
+export const capabilities = [
+  {
+    heading: 'Engineering work',
+    items: [
+      'Investigate an existing codebase',
+      'Plan implementation work',
+      'Make scoped code changes',
+      'Fix tooling, front-end, and documentation issues',
+      'Review output against the original objective',
+    ],
+  },
+  {
+    heading: 'Developer tools',
+    items: [
+      'Work with Git and GitHub CLI',
+      'Read issues, commits, and repository state',
+      'Run project commands and checks',
+      'Record progress notes clearly',
+    ],
+  },
+  {
+    heading: 'Operations',
+    items: [
+      'Support maintenance routines',
+      'Surface stale or blocked work',
+      'Summarise recent activity',
+    ],
+  },
+]

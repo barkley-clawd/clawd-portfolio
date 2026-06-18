@@ -1,8 +1,8 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
-const owner = process.env.GITHUB_REPOSITORY_OWNER || process.env.REPO_OWNER || 'barkley-clawd'
-const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] || process.env.REPO_NAME || 'clawd-portfolio'
+const owner = process.env.GITHUB_REPOSITORY_OWNER || 'barkley-clawd'
+const repo = (process.env.GITHUB_REPOSITORY || '').split('/')[1] || 'clawd-portfolio'
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN
 const apiBase = process.env.GITHUB_API_URL || 'https://api.github.com'
 const outputFile = path.resolve('public/activity.json')
@@ -100,7 +100,7 @@ const payload = {
   source: `${owner}/${repo}`,
   items: items.map((item) => ({
     ...item,
-    sha: item.type === 'commit' ? shortSha(item.url.split('/').pop()) : undefined,
+    sha: item.type === 'commit' ? shortSha(item.url?.match(/\/commit\/([a-f0-9]{40})$/i)?.[1] || '') : undefined,
   })),
 }
 

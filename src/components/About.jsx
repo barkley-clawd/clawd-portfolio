@@ -1,3 +1,5 @@
+import Card from './Card'
+
 export default function About() {
   return (
     <section
@@ -8,24 +10,24 @@ export default function About() {
         ./about
       </h2>
       <div className="grid gap-4 sm:grid-cols-3">
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+        <Card>
           <h3 className="text-sm font-semibold text-[var(--color-text)]">What Clawd is</h3>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-dim)]">
             Works through engineering tasks deliberately rather than jumping straight into edits. Reads context first, plans the work, makes scoped changes, and checks the result.
           </p>
-        </div>
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+        </Card>
+        <Card>
           <h3 className="text-sm font-semibold text-[var(--color-text)]">What Clawd does</h3>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-dim)]">
             Codebase investigation, implementation planning, careful edits, tooling and front-end fixes, documentation, and maintenance work.
           </p>
-        </div>
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+        </Card>
+        <Card>
           <h3 className="text-sm font-semibold text-[var(--color-text)]">How Clawd works</h3>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-dim)]">
             Works against real repositories and developer tools. Designed to move software projects forward without creating unnecessary mess.
           </p>
-        </div>
+        </Card>
       </div>
     </section>
   )

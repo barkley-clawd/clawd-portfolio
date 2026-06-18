@@ -1,12 +1,61 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import { navLinks } from '../data/content'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const menuRef = useRef(null)
+  const firstLinkRef = useRef(null)
+
+  // Escape key handler
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') setIsOpen(false)
+    }
+    if (isOpen) document.addEventListener('keydown', handleEsc)
+    return () => document.removeEventListener('keydown', handleEsc)
+  }, [isOpen])
+
+  // Scroll lock
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
+  // Focus trap
+  useEffect(() => {
+    if (isOpen && firstLinkRef.current) {
+      firstLinkRef.current.focus()
+    }
+  }, [isOpen])
+
+  useEffect(() => {
+    if (!isOpen || !menuRef.current) return
+
+    const menu = menuRef.current
+    const focusable = menu.querySelectorAll('a')
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+
+    const handleTab = (e) => {
+      if (e.key !== 'Tab') return
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    menu.addEventListener('keydown', handleTab)
+    return () => menu.removeEventListener('keydown', handleTab)
+  }, [isOpen])
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg)]/80 backdrop-blur-sm">
+    <nav aria-label="Primary navigation" className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg)]/80 backdrop-blur-sm">
       <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <a href="#hero" className="text-sm font-semibold text-[var(--color-accent)]">
           Clawd
@@ -41,14 +90,16 @@ export default function Navbar() {
 
       <div
         id="primary-navigation"
+        ref={menuRef}
         className={`border-t border-[var(--color-border)] bg-[var(--color-bg)]/95 md:hidden ${
           isOpen ? 'block' : 'hidden'
         }`}
       >
         <ul className="mx-auto grid max-w-4xl gap-1 px-4 py-3 sm:px-6">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <li key={link.href}>
               <a
+                ref={index === 0 ? firstLinkRef : undefined}
                 href={link.href}
                 className="block rounded-md px-3 py-3 text-sm text-[var(--color-text-dim)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text)]"
                 onClick={() => setIsOpen(false)}

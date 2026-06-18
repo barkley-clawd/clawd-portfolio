@@ -1,4 +1,5 @@
 import { workflowSteps, workflowExplanation } from '../data/content'
+import Card from './Card'
 
 export default function Workflow() {
   return (
@@ -14,10 +15,7 @@ export default function Workflow() {
       </p>
       <div className="grid gap-4 sm:grid-cols-2">
         {workflowSteps.map((step) => (
-          <div
-            key={step.step}
-            className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4"
-          >
+          <Card key={step.step} padding="p-4">
             <span className="text-xs font-semibold text-[var(--color-accent)]">
               {String(step.step).padStart(2, '0')}
             </span>
@@ -27,7 +25,7 @@ export default function Workflow() {
             <p className="mt-1 text-xs leading-relaxed text-[var(--color-text-dim)]">
               {step.description}
             </p>
-          </div>
+          </Card>
         ))}
       </div>
       <p className="mt-8 text-sm leading-relaxed text-[var(--color-text-dim)]">
