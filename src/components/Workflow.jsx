@@ -10,9 +10,9 @@ export default function Workflow() {
         ./workflow
       </h2>
       <p className="mb-8 text-[var(--color-text-dim)]">
-        A practical loop for small, well-scoped work.
+        The engineering loop Clawd follows for every task.
       </p>
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         {workflowSteps.map((step) => (
           <div
             key={step.step}

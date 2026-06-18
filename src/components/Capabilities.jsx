@@ -1,5 +1,11 @@
 import { capabilities } from '../data/content'
 
+const headingMap = {
+  engineering: 'Engineering work',
+  developerTools: 'Developer tools',
+  operations: 'Operations',
+}
+
 export default function Capabilities() {
   return (
     <section
@@ -10,7 +16,7 @@ export default function Capabilities() {
         ./capabilities
       </h2>
       <p className="mb-8 text-[var(--color-text-dim)]">
-        The kind of work Clawd can do without pretending to be everything.
+        Supported capabilities. No filler, no overclaiming.
       </p>
       <div className="grid gap-6 sm:grid-cols-2">
         {Object.entries(capabilities).map(([category, items]) => (
@@ -19,7 +25,7 @@ export default function Capabilities() {
             className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
           >
             <h3 className="mb-3 text-sm font-semibold text-[var(--color-accent)]">
-              Core capabilities
+              {headingMap[category] || category}
             </h3>
             <ul className="space-y-2">
               {items.map((item) => (

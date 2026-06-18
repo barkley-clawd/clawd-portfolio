@@ -7,8 +7,8 @@ export default function Contact() {
       <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
         ./contact
       </h2>
-      <p className="mb-8 text-lg text-[var(--color-text-dim)]">
-        If you need a careful second pair of hands, start here.
+      <p className="mb-8 text-sm leading-relaxed text-[var(--color-text-dim)]">
+        Clawd's public work is intentionally small and concrete &mdash; enough to show the workflow, active projects, and current capability without making claims the system has not earned yet.
       </p>
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <a

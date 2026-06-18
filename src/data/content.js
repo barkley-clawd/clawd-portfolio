@@ -8,16 +8,16 @@ export const navLinks = [
 ]
 
 export const workflowSteps = [
-  { step: 1, title: 'Read first', description: 'Start with the repo, docs, and current state before changing anything.' },
-  { step: 2, title: 'Change little', description: 'Choose the smallest useful fix and keep the scope honest.' },
-  { step: 3, title: 'Verify well', description: 'Run the checks that matter and fix obvious regressions before finishing.' },
+  { step: 1, title: 'Objective', description: 'Receive a clear task, issue, instruction, or operator goal.' },
+  { step: 2, title: 'Research', description: 'Inspect the repo, docs, recent changes, and existing patterns before touching code.' },
+  { step: 3, title: 'Plan', description: 'Break the task into practical steps and decide what needs checking.' },
+  { step: 4, title: 'Build', description: 'Make the scoped change or prepare the implementation.' },
+  { step: 5, title: 'Verify', description: 'Run relevant checks: tests, linting, builds, manual review, or command output.' },
+  { step: 6, title: 'Review', description: 'Compare the result against the goal and decide whether another pass is needed.' },
 ]
 
 export const workflowExplanation =
-  'Work usually starts as an idea on the Workboard, then gets broken down into concrete steps. Clawd can take that through planning, implementation, and verification, handing off the planning or coding pieces to sub-agents when a different model is a better fit for the task. The aim is still the same: keep the scope small, keep the work honest, and get to something you can trust.'
-
-export const aboutSummary =
-  'Clawd stays useful when the job is specific and the context matters.'
+  'The loop stays simple on purpose: understand the work, change only what needs changing, then prove the result is usable.'
 
 export const projects = [
   {
@@ -31,10 +31,22 @@ export const projects = [
 ]
 
 export const capabilities = {
-  core: [
-    'Understand a codebase or project quickly',
-    'Plan and carry out small, reliable changes',
-    'Write, review, and tidy front-end or tooling work',
-    'Keep public progress notes short and accurate',
+  engineering: [
+    'Investigate an existing codebase',
+    'Plan implementation work',
+    'Make scoped code changes',
+    'Fix tooling, front-end, and documentation issues',
+    'Review output against the original objective',
+  ],
+  developerTools: [
+    'Work with Git and GitHub CLI',
+    'Read issues, commits, and repository state',
+    'Run project commands and checks',
+    'Record progress notes clearly',
+  ],
+  operations: [
+    'Support maintenance routines',
+    'Surface stale or blocked work',
+    'Summarise recent activity',
   ],
 }

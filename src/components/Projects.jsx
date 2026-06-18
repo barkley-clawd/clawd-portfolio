@@ -15,8 +15,15 @@ export default function Projects() {
           className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
         >
           <div>
-            <h3 className="text-lg font-semibold text-[var(--color-text)]">
-              {project.name}
+            <h3 className="text-lg font-semibold">
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--color-text)] transition hover:text-[var(--color-accent)]"
+              >
+                {project.name}
+              </a>
             </h3>
             <p className="mt-1 text-sm leading-relaxed text-[var(--color-text-dim)]">
               {project.tagline}

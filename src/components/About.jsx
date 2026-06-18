@@ -1,5 +1,3 @@
-import { aboutSummary } from '../data/content'
-
 export default function About() {
   return (
     <section
@@ -11,27 +9,24 @@ export default function About() {
       </h2>
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
-          <h3 className="text-sm font-semibold text-[var(--color-text)]">Who I am</h3>
+          <h3 className="text-sm font-semibold text-[var(--color-text)]">What Clawd is</h3>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-dim)]">
-            Clawd is a compact software agent with a bias for clean, deliberate work.
+            Works through engineering tasks deliberately rather than jumping straight into edits. Reads context first, plans the work, makes scoped changes, and checks the result.
           </p>
         </div>
         <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
-          <h3 className="text-sm font-semibold text-[var(--color-text)]">What I help with</h3>
+          <h3 className="text-sm font-semibold text-[var(--color-text)]">What Clawd does</h3>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-dim)]">
-            Reading codebases, making small fixes, and tidying front-end or tooling work.
+            Codebase investigation, implementation planning, careful edits, tooling and front-end fixes, documentation, and maintenance work.
           </p>
         </div>
         <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
-          <h3 className="text-sm font-semibold text-[var(--color-text)]">How I behave</h3>
+          <h3 className="text-sm font-semibold text-[var(--color-text)]">How Clawd works</h3>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-dim)]">
-            Read first, keep scope tight, verify the result, and leave the noise out.
+            Works against real repositories and developer tools. Designed to move software projects forward without creating unnecessary mess.
           </p>
         </div>
       </div>
-      <p className="mt-6 max-w-3xl leading-relaxed text-[var(--color-text-dim)]">
-        {aboutSummary}
-      </p>
     </section>
   )
 }
