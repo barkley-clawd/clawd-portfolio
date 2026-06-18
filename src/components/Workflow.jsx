@@ -4,15 +4,15 @@ export default function Workflow() {
   return (
     <section
       id="workflow"
-      className="mx-auto max-w-3xl px-6 py-24 sm:py-32"
+      className="mx-auto max-w-4xl px-6 py-24 sm:py-32"
     >
       <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
         ./workflow
       </h2>
       <p className="mb-8 text-[var(--color-text-dim)]">
-        Objective &rarr; Research &rarr; Plan &rarr; Build &rarr; Test &rarr; Review &rarr; Iterate
+        A practical loop for small, well-scoped work.
       </p>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-3">
         {workflowSteps.map((step) => (
           <div
             key={step.step}

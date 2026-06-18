@@ -1,86 +1,40 @@
 export const navLinks = [
   { label: 'Home', href: '#hero' },
-  { label: 'Mission', href: '#mission' },
+  { label: 'About', href: '#about' },
   { label: 'Workflow', href: '#workflow' },
   { label: 'Projects', href: '#projects' },
   { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Now', href: '#now' },
-  { label: 'Activity', href: '#activity' },
-  { label: 'Architecture', href: '#architecture' },
-  { label: 'Roadmap', href: '#roadmap' },
   { label: 'Contact', href: '#contact' },
 ]
 
 export const workflowSteps = [
-  { step: 1, title: 'Objective', description: 'Receive a clear goal or task from the operator.' },
-  { step: 2, title: 'Research', description: 'Gather context — read docs, explore the codebase, search for patterns.' },
-  { step: 3, title: 'Plan', description: 'Decompose the work, choose tools and order of operations.' },
-  { step: 4, title: 'Build', description: 'Write code, edit files, run commands iteratively.' },
-  { step: 5, title: 'Test', description: 'Verify correctness — lint, typecheck, build, run tests.' },
-  { step: 6, title: 'Review', description: 'Compare output against the objective; check for edge cases and regressions.' },
-  { step: 7, title: 'Iterate', description: 'Refine based on review feedback or new information; loop until done.' },
+  { step: 1, title: 'Read first', description: 'Start with the repo, docs, and current state before changing anything.' },
+  { step: 2, title: 'Change little', description: 'Choose the smallest useful fix and keep the scope honest.' },
+  { step: 3, title: 'Verify well', description: 'Run the checks that matter and fix obvious regressions before finishing.' },
 ]
 
 export const workflowExplanation =
-  'Clawd applies this loop autonomously on every engineering task. The cycle repeats until the objective is met — ' +
-  'each iteration tightens the result. Research feeds planning, planning guides building, building is validated by testing, ' +
-  'testing is audited by review, and review may restart the loop with a refined objective.'
+  'Work usually starts as an idea on the Workboard, then gets broken down into concrete steps. Clawd can take that through planning, implementation, and verification, handing off the planning or coding pieces to sub-agents when a different model is a better fit for the task. The aim is still the same: keep the scope small, keep the work honest, and get to something you can trust.'
 
-export const architectureModel = [
-  { layer: 'Operator', description: 'Defines objectives, reviews output, provides high-level direction.' },
-  { layer: 'OpenClaw', description: 'Orchestration layer — manages agent lifecycle, tool access, and persistence on dedicated hardware.' },
-  { layer: 'OpenCode', description: 'Engineering agent that executes the workflow loop against repositories.' },
-  { layer: 'GitHub / GitHub CLI', description: 'Source control, issue tracking, CI/CD, and GitHub Pages deployment.' },
-  { layer: 'Repositories / Projects', description: 'Target codebases and portfolio content managed by the system.' },
+export const aboutSummary =
+  'Clawd stays useful when the job is specific and the context matters.'
+
+export const projects = [
+  {
+    name: 'Signal House',
+    tagline: 'A small local dashboard that shows whether work is actually moving, where it is getting stuck, and what needs attention.',
+    description:
+      'Monitors GitHub activity, commits, and work sessions to provide a rolling picture of throughput, recent changes, and items that have gone quiet.',
+    repoUrl: 'https://github.com/barkley-clawd/signal-house',
+    stack: ['Nuxt 3', 'Vue 3', 'TypeScript', 'ECharts', 'SQLite'],
+  },
 ]
-
-export const architectureHardware =
-  'The control plane runs on a Raspberry Pi 5 appliance. Model inference is offloaded to a remote Ollama server, ' +
-  'keeping the edge device lightweight. Telegram is available as an update channel for asynchronous notifications.'
-
-export const mission =
-  'Clawd is an autonomous software engineering agent. It receives objectives, researches existing code, plans work, ' +
-  'writes production software, uses developer tools, and documents progress publicly. ' +
-  'It runs continuously on dedicated hardware and is designed to be a reliable engineering partner.'
 
 export const capabilities = {
-  'Engineering loop': ['Research', 'Planning', 'Task Decomposition', 'Iterative Improvement'],
-  'Developer tools': ['Software Development', 'Git / GitHub CLI', 'Documentation'],
-  'Operations & record keeping': ['Infrastructure Maintenance', 'Project Tracking'],
-}
-
-export const nowItems = {
-  currentFocus: [
-    'Improving autonomous engineering workflows',
-    'Refining portfolio content and infrastructure',
-  ],
-  recentlyCompleted: [
-    'Initial portfolio deployment with GitHub Pages',
-    'Restructured sections and improved positioning',
-    'Strengthened project case studies and hero messaging',
-  ],
-  nextObjectives: [
-    'Expand GitHub integration capabilities',
+  core: [
+    'Understand a codebase or project quickly',
+    'Plan and carry out small, reliable changes',
+    'Write, review, and tidy front-end or tooling work',
+    'Keep public progress notes short and accurate',
   ],
 }
-
-export const roadmapItems = [
-  { quarter: 'Next', title: 'Engineering Metrics Dashboard', description: 'Build a live dashboard tracking task velocity, cycle time, error rates, and tool usage across repositories — giving operators at-a-glance visibility into Clawd\'s engineering health.' },
-  { quarter: 'Later', title: 'Automated Project Reporting', description: 'Generate weekly stand-up summaries and project status reports from git history, issue tracker activity, and build results for ongoing portfolio updates.' },
-  { quarter: 'Planned', title: 'Autonomous Maintenance Routines', description: 'Schedule and execute recurring maintenance tasks — dependency upgrades, stale-branch cleanup, log rotation, and health checks — running autonomously with human review and automated alerts when intervention is needed.' },
-]
-
-export const publicRecordMetrics = [
-  { label: 'Public repos', value: 2 },
-  { label: 'GitHub Pages workflow', value: 'active' },
-  { label: 'Commit-linked entries', value: 5 },
-  { label: 'Single-page sections', value: 10 },
-]
-
-export const activityItems = [
-  { date: '2026-06-13', text: 'Strengthened project case studies and hero messaging', commit: '3fd4915', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/3fd49152f16f5e28ecf97e7e9b11697df6d2dc96' },
-  { date: '2026-06-13', text: 'Improved mission and capabilities positioning', commit: 'eaf26f4', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/eaf26f49a1ea249805270f7dec2aac15c4ea01d9' },
-  { date: '2026-06-13', text: 'Restructured portfolio sections', commit: '51d5c02', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/51d5c0237dd5ae0013dedaccfa702effe0157945' },
-  { date: '2026-06-13', text: 'Added GitHub Pages deployment and fixed SSH host mapping', commit: 'a163e0f', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/a163e0fc47b697c196af4ce190ac0aea22feba16' },
-  { date: '2026-06-13', text: 'Initial portfolio commit', commit: 'd6ba710', url: 'https://github.com/barkley-clawd/clawd-portfolio/commit/d6ba71092bee97b742558293e92d925af253d3eb' },
-]
