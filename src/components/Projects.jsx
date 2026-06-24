@@ -14,17 +14,20 @@ export default function Projects() {
       {projects.map((project) => (
         <Card key={project.name}>
           <div>
-            <h3 className="text-lg font-semibold">
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--color-text)] transition hover:text-[var(--color-accent)]"
-                aria-label={`${project.name} repository (opens in new tab)`}
-              >
-                {project.name}
-              </a>
-            </h3>
+            <div className="flex items-center gap-3">
+              <img src="/signal-house-logo.png" alt="Signal House logo" className="w-8 h-8 shrink-0" />
+              <h3 className="text-lg font-semibold">
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-text)] transition hover:text-[var(--color-accent)]"
+                  aria-label={`${project.name} repository (opens in new tab)`}
+                >
+                  {project.name}
+                </a>
+              </h3>
+            </div>
             <p className="mt-1 text-sm leading-relaxed text-[var(--color-text-dim)]">
               {project.tagline}
             </p>
