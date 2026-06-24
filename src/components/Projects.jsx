@@ -46,18 +46,23 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <div className="flex shrink-0 items-center gap-2">
-              <img
-                src="https://github.com/barkley-clawd/signal-house/workflows/CI/badge.svg"
-                alt={`CI build status for ${project.name}`}
-                className="h-5 grayscale brightness-50"
-              />
+            <div className="flex shrink-0 flex-row items-center gap-3">
+              {project.liveUrl && (
+                <ExternalLink
+                  href={project.liveUrl}
+                  ariaLabel={`${project.name} live site (opens in new tab)`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-solid border-[var(--color-border)] px-4 py-2 text-xs font-medium text-[var(--color-text-dim)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-[0_0_12px_var(--color-accent-glow)]"
+                >
+                  View Signal House
+                </ExternalLink>
+              )}
               <ExternalLink
                 href={project.repoUrl}
                 ariaLabel={`${project.name} repository on GitHub (opens in new tab)`}
-                className="text-[var(--color-text-dim)] transition hover:text-[var(--color-accent)]"
+                className="inline-flex items-center gap-2 rounded-lg border border-solid border-[var(--color-border)] px-4 py-2 text-xs font-medium text-[var(--color-text-dim)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-[0_0_12px_var(--color-accent-glow)]"
               >
-                <IconGitHub />
+                <IconGitHub className="h-4 w-4" />
+                GitHub
               </ExternalLink>
             </div>
           </div>
