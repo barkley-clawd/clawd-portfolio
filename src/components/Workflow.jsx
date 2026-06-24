@@ -14,11 +14,14 @@ export default function Workflow() {
         The engineering loop Clawd follows for every task.
       </p>
       <div className="grid gap-4 sm:grid-cols-2">
-        {workflowSteps.map((step) => (
+        {workflowSteps.map((step, index) => (
           <Card key={step.step} padding="p-4">
             <span className="text-xs font-semibold text-[var(--color-accent)]">
               {String(step.step).padStart(2, '0')}
             </span>
+            {index < workflowSteps.length - 1 && (
+              <span className="ml-1 text-xs text-[var(--color-accent)] opacity-60">→</span>
+            )}
             <h3 className="mt-1 text-sm font-semibold text-[var(--color-text)]">
               {step.title}
             </h3>
