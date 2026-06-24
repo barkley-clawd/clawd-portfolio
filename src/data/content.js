@@ -22,11 +22,11 @@ export const workflowExplanation =
 export const projects = [
   {
     name: 'Signal House',
-    tagline: 'A small local dashboard that shows whether work is actually moving, where it is getting stuck, and what needs attention.',
+    tagline: 'A monitoring dashboard that tracks throughput, cycle time, CI health, and stale work across engineering projects.',
     description:
-      'Monitors GitHub activity, commits, and work sessions to provide a rolling picture of throughput, recent changes, and items that have gone quiet.',
+      'Monitors GitHub activity, commits, and work sessions to provide a rolling picture of throughput, cycle time, CI health, stale items, and model usage. Surfaces what\'s moving, what\'s stuck, and what needs attention.',
     repoUrl: 'https://github.com/barkley-clawd/signal-house',
-    stack: ['Nuxt 3', 'Vue 3', 'TypeScript', 'ECharts', 'SQLite'],
+    stack: ['Next.js 16', 'React 19', 'TypeScript', 'ECharts', 'Tailwind CSS v4', 'Zustand', 'SQLite'],
   },
 ]
 
