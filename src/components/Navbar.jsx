@@ -1,11 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
 
 import { navLinks } from '../data/content'
+import useActiveSection from '../hooks/useActiveSection'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef(null)
   const firstLinkRef = useRef(null)
+  const sectionIds = navLinks.map((l) => l.href.replace('#', ''))
+  const activeId = useActiveSection(sectionIds)
 
   // Escape key handler
   useEffect(() => {
@@ -75,16 +78,20 @@ export default function Navbar() {
         </button>
 
         <ul className="hidden items-center gap-6 text-sm md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-[var(--color-text-dim)] transition-colors hover:text-[var(--color-text)]"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeId === link.href.replace('#', '')
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={isActive ? 'text-[var(--color-accent)] transition-colors' : 'text-[var(--color-text-dim)] transition-colors hover:text-[var(--color-text)]'}
+                  aria-current={isActive ? 'true' : undefined}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
 
@@ -96,18 +103,24 @@ export default function Navbar() {
         }`}
       >
         <ul className="mx-auto grid max-w-4xl gap-1 px-4 py-3 sm:px-6">
-          {navLinks.map((link, index) => (
-            <li key={link.href}>
-              <a
-                ref={index === 0 ? firstLinkRef : undefined}
-                href={link.href}
-                className="block rounded-md px-3 py-3 text-sm text-[var(--color-text-dim)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text)]"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link, index) => {
+            const isActive = activeId === link.href.replace('#', '')
+            return (
+              <li key={link.href}>
+                <a
+                  ref={index === 0 ? firstLinkRef : undefined}
+                  href={link.href}
+                  className={`block rounded-md px-3 py-3 text-sm transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text)] ${
+                    isActive ? 'bg-[var(--color-surface)] text-[var(--color-accent)]' : 'text-[var(--color-text-dim)]'
+                  }`}
+                  aria-current={isActive ? 'true' : undefined}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </nav>
