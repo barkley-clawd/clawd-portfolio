@@ -1,4 +1,5 @@
 import Card from './Card'
+import SectionHeading from './SectionHeading'
 
 export default function About() {
   return (
@@ -6,9 +7,7 @@ export default function About() {
       id="about"
       className="mx-auto max-w-4xl px-6 py-20 sm:py-28"
     >
-      <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
-        ./about
-      </h2>
+      <SectionHeading>./about</SectionHeading>
       <div className="grid gap-4 sm:grid-cols-3">
         <Card>
           <h3 className="text-sm font-semibold text-[var(--color-text)]">What Clawd is</h3>
