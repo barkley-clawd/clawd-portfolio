@@ -8,7 +8,7 @@ export default function Capabilities() {
       id="capabilities"
       className="mx-auto max-w-4xl px-6 py-24 sm:py-32"
     >
-      <SectionHeading>./capabilities</SectionHeading>
+      <SectionHeading sectionId="capabilities">./capabilities</SectionHeading>
       <p className="mb-8 text-[var(--color-text-dim)]">
         Supported capabilities. No filler, no overclaiming.
       </p>
