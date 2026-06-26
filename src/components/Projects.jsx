@@ -9,7 +9,7 @@ export default function Projects() {
       className="group relative flex min-h-screen w-full items-center bg-gradient-to-br from-[var(--color-accent)]/12 via-[var(--color-surface)] to-[var(--color-bg)] py-24 sm:py-32"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(141,211,199,0.16),_transparent_34%),radial-gradient(circle_at_bottom,_rgba(125,211,252,0.06),_transparent_28%)]" />
-      <img src="/projects-bg.png" alt="" className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.1]" />
+      <img src="/projects-bg.webp" alt="" className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.1]" />
       <div className="mx-auto w-full max-w-6xl px-6">
         {projects.map((project) => (
           <div key={project.name} className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
