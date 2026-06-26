@@ -1,5 +1,6 @@
 import { capabilities } from '../data/content'
 import Card from './Card'
+import SectionHeading from './SectionHeading'
 
 export default function Capabilities() {
   return (
@@ -7,9 +8,7 @@ export default function Capabilities() {
       id="capabilities"
       className="mx-auto max-w-4xl px-6 py-24 sm:py-32"
     >
-      <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
-        ./capabilities
-      </h2>
+      <SectionHeading>./capabilities</SectionHeading>
       <p className="mb-8 text-[var(--color-text-dim)]">
         Supported capabilities. No filler, no overclaiming.
       </p>

@@ -1,5 +1,6 @@
 import { workflowSteps, workflowExplanation } from '../data/content'
 import Card from './Card'
+import SectionHeading from './SectionHeading'
 
 export default function Workflow() {
   return (
@@ -7,9 +8,7 @@ export default function Workflow() {
       id="workflow"
       className="mx-auto max-w-4xl px-6 py-24 sm:py-32"
     >
-      <h2 className="mb-2 text-sm font-semibold text-[var(--color-accent)]">
-        ./workflow
-      </h2>
+      <SectionHeading>./workflow</SectionHeading>
       <p className="mb-8 text-[var(--color-text-dim)]">
         The engineering loop Clawd follows for every task.
       </p>
