@@ -15,7 +15,7 @@ export default function useActiveSection(ids) {
         )
         setActiveId(visible[0].target.id)
       },
-      { rootMargin: '-40% 0px -55% 0px', threshold: 0 },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 },
     )
 
     const elements = ids
