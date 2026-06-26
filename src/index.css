@@ -38,7 +38,7 @@ body {
   opacity: 0;
 }
 
-.section-heading--active::after {
+.group:hover .section-heading::after {
   opacity: 1;
   animation: blink 1s step-end infinite;
 }
@@ -49,7 +49,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .section-heading--active::after {
+  .group:hover .section-heading::after {
     animation: none;
   }
 }

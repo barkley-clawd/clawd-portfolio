@@ -6,9 +6,9 @@ export default function Workflow() {
   return (
     <section
       id="workflow"
-      className="mx-auto max-w-4xl px-6 py-24 sm:py-32"
+      className="group mx-auto max-w-4xl px-6 py-24 sm:py-32"
     >
-      <SectionHeading sectionId="workflow">./workflow</SectionHeading>
+      <SectionHeading>./workflow</SectionHeading>
       <p className="mb-8 text-[var(--color-text-dim)]">
         The engineering loop Clawd follows for every task.
       </p>

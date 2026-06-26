@@ -5,9 +5,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-4xl px-6 py-20 sm:py-28"
+      className="group mx-auto max-w-4xl px-6 py-20 sm:py-28"
     >
-      <SectionHeading sectionId="about">./about</SectionHeading>
+      <SectionHeading>./about</SectionHeading>
       <div className="grid gap-4 sm:grid-cols-3">
         <Card>
           <h3 className="text-sm font-semibold text-[var(--color-text)]">What Clawd is</h3>

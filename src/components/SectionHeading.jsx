@@ -1,12 +1,6 @@
-import useActiveSection from '../hooks/useActiveSection'
-
-export default function SectionHeading({ children, sectionId, className = '' }) {
-  const activeId = useActiveSection([sectionId])
-  const isActive = activeId === sectionId
+export default function SectionHeading({ children, className = '' }) {
   return (
-    <h2
-      className={`section-heading mb-2 text-sm font-semibold text-[var(--color-accent)] ${isActive ? 'section-heading--active' : ''} ${className}`}
-    >
+    <h2 className={`section-heading mb-2 text-sm font-semibold text-[var(--color-accent)] ${className}`}>
       {children}
     </h2>
   )
