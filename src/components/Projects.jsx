@@ -10,7 +10,7 @@ export default function Projects() {
       id="projects"
       className="mx-auto max-w-4xl px-6 py-24 sm:py-32"
     >
-      <SectionHeading>./projects</SectionHeading>
+      <SectionHeading sectionId="projects">./projects</SectionHeading>
       {projects.map((project) => (
         <Card key={project.name}>
           <div>

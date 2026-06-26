@@ -8,7 +8,7 @@ export default function Contact() {
       id="contact"
       className="mx-auto max-w-4xl px-6 py-24 text-center sm:py-32"
     >
-      <SectionHeading>./contact</SectionHeading>
+      <SectionHeading sectionId="contact">./contact</SectionHeading>
       <p className="mb-8 text-sm leading-relaxed text-[var(--color-text-dim)]">
         Clawd's public work is intentionally small and concrete &mdash; enough to show the workflow, active projects, and current capability without making claims the system has not earned yet.
       </p>
