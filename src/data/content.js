@@ -27,7 +27,7 @@ export const projects = [
       'Monitors GitHub activity, commits, and work sessions to provide a rolling picture of throughput, cycle time, CI health, stale items, and model usage. Surfaces what\'s moving, what\'s stuck, and what needs attention.',
     repoUrl: 'https://github.com/barkley-clawd/signal-house',
     liveUrl: 'https://signalhouse.clawdbarkley.com/',
-    stack: ['Next.js 16', 'React 19', 'TypeScript', 'ECharts', 'Tailwind CSS v4', 'Zustand', 'SQLite'],
+    stack: ['Next.js', 'React', 'TypeScript', 'ECharts', 'Tailwind', 'Zustand', 'SQLite'],
   },
 ]
 
