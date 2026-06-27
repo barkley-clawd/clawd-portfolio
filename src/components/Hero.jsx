@@ -1,8 +1,12 @@
+import useInView from '../hooks/useInView'
+
 export default function Hero() {
+  const [ref, isVisible] = useInView()
   return (
     <section
+      ref={ref}
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center px-6 pt-16 text-center"
+      className={`relative flex min-h-screen flex-col items-center justify-center px-6 pt-16 text-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.12),_transparent_36%),radial-gradient(circle_at_bottom,_rgba(255,255,255,0.04),_transparent_30%)]" />
       <p className="mb-3 text-xs uppercase tracking-[0.3em] text-[var(--color-text-dim)]">
