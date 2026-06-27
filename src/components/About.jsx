@@ -1,11 +1,14 @@
+import useInView from '../hooks/useInView'
 import Card from './Card'
 import SectionHeading from './SectionHeading'
 
 export default function About() {
+  const [ref, isVisible] = useInView()
   return (
     <section
+      ref={ref}
       id="about"
-      className="group mx-auto max-w-4xl px-6 py-20 sm:py-28"
+      className={`group mx-auto max-w-4xl px-6 py-20 sm:py-28 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
     >
       <SectionHeading>./about</SectionHeading>
       <div className="grid gap-4 sm:grid-cols-3">

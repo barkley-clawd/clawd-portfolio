@@ -1,12 +1,15 @@
 import { projects } from '../data/content'
+import useInView from '../hooks/useInView'
 import ExternalLink from './ExternalLink'
 import IconGitHub from './IconGitHub'
 
 export default function Projects() {
+  const [ref, isVisible] = useInView()
   return (
     <section
+      ref={ref}
       id="projects"
-      className="group relative flex min-h-screen w-full items-center bg-gradient-to-br from-[var(--color-accent)]/12 via-[var(--color-surface)] to-[var(--color-bg)] py-24 sm:py-32"
+      className={`group relative flex min-h-screen w-full items-center bg-gradient-to-br from-[var(--color-accent)]/12 via-[var(--color-surface)] to-[var(--color-bg)] py-24 sm:py-32 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(141,211,199,0.16),_transparent_34%),radial-gradient(circle_at_bottom,_rgba(125,211,252,0.06),_transparent_28%)]" />
       <img src="/projects-bg.webp" alt="" className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.1]" />

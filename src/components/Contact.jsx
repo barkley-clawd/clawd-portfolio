@@ -1,12 +1,15 @@
+import useInView from '../hooks/useInView'
 import ExternalLink from './ExternalLink'
 import IconGitHub from './IconGitHub'
 import SectionHeading from './SectionHeading'
 
 export default function Contact() {
+  const [ref, isVisible] = useInView()
   return (
     <section
+      ref={ref}
       id="contact"
-      className="group mx-auto max-w-4xl px-6 py-24 text-center sm:py-32"
+      className={`group mx-auto max-w-4xl px-6 py-24 text-center sm:py-32 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
     >
       <SectionHeading>./contact</SectionHeading>
       <p className="mb-8 text-sm leading-relaxed text-[var(--color-text-dim)]">
